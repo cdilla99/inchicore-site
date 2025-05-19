@@ -13,6 +13,137 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-gray-100 text-gray-800 scroll-smooth">
-  <!-- ... content omitted here for brevity ... -->
+  <!-- Header -->
+  <header class="bg-white shadow-md animate__animated animate__fadeInDown sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600 flex items-center gap-2"><i data-feather="home"></i> Inchicore</h1>
+      <nav class="space-x-4 text-sm font-semibold">
+        <a href="#services" class="text-gray-700 hover:text-indigo-600">Services</a>
+        <a href="#projects" class="text-gray-700 hover:text-indigo-600">Projects</a>
+        <a href="#gallery" class="text-gray-700 hover:text-indigo-600">Gallery</a>
+        <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
+        <a href="#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-600 text-white py-20 animate__animated animate__fadeIn">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">Transforming East Toronto Homes</h2>
+      <p class="text-lg mb-6">Custom renovations and quality craftsmanship in East Toronto and Scarborough.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#contact" class="bg-white text-indigo-600 px-6 py-3 rounded shadow-md font-semibold hover:bg-gray-100"><i data-feather="phone-call" class="inline-block mr-2"></i>Free Consultation</a>
+        <a href="#subscribe" class="border border-white text-white px-6 py-3 rounded shadow-md font-semibold hover:bg-white hover:text-indigo-600"><i data-feather="mail" class="inline-block mr-2"></i>Become an Insider</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-8 text-center">Our Services</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-6 rounded shadow-md text-center">
+          <i data-feather="tool" class="w-8 h-8 mx-auto text-indigo-600 mb-4"></i>
+          <h4 class="text-xl font-semibold mb-2">Custom Renovations</h4>
+          <p>Create your dream kitchen, bathroom or open-concept living space.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded shadow-md text-center">
+          <i data-feather="plus-square" class="w-8 h-8 mx-auto text-indigo-600 mb-4"></i>
+          <h4 class="text-xl font-semibold mb-2">Home Additions</h4>
+          <p>Expand your living space with professionally built additions and suites.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded shadow-md text-center">
+          <i data-feather="home" class="w-8 h-8 mx-auto text-indigo-600 mb-4"></i>
+          <h4 class="text-xl font-semibold mb-2">Laneway & Basement Units</h4>
+          <p>Legal rental units and in-law suites that boost property value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Placeholder Sections -->
+  <section id="projects" class="py-16 bg-gray-100 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Featured Projects</h3>
+      <p class="text-gray-600">Before & after renovations and real-life client results — coming soon.</p>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-16 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Photo Gallery</h3>
+      <p class="text-gray-600">A showcase of transformation. Check back for updates with stunning visuals.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-4">About Inchicore</h3>
+      <p class="text-gray-700 text-lg">We’re a trusted East Toronto builder with a reputation for quality work and personal service. Whether it’s a full-home reno or a legal garden suite, we handle it with professionalism and pride.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6 text-center">Contact Us</h3>
+      <form class="bg-gray-50 p-6 rounded shadow-md space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full border px-4 py-2 rounded" required>
+        <input type="email" placeholder="Email Address" class="w-full border px-4 py-2 rounded" required>
+        <select class="w-full border px-4 py-2 rounded" required>
+          <option value="">Select a Service</option>
+          <option>Custom Renovation</option>
+          <option>Home Addition</option>
+          <option>Laneway or Basement Unit</option>
+          <option>Real Estate Consulting</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell us more..." class="w-full border px-4 py-2 rounded" rows="4"></textarea>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Send Message</button>
+      </form>
+      <div class="mt-8 text-center">
+        <p class="text-sm text-gray-600">📍 122 Kalmar Ave, Scarborough, ON</p>
+        <div class="mt-4">
+          <iframe src="https://www.google.com/maps?q=122+Kalmar+Ave+Scarborough,+ON,+M1N+3G7+Canada&output=embed" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe Section -->
+  <section id="subscribe" class="py-12 bg-indigo-50">
+    <div class="max-w-xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-2">Become an Inchicore Insider</h3>
+      <p class="text-gray-600 mb-4">Exclusive updates, renovation tips, and homeowner insights.</p>
+      <form class="flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" placeholder="Enter your email" class="flex-grow border border-gray-300 px-4 py-2 rounded" required>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center py-6 shadow-inner">
+    <p class="text-gray-600">&copy; 2025 Inchicore Contracting Inc. | All Rights Reserved</p>
+    <div class="mt-2 space-x-4">
+      <a href="https://www.instagram.com/inchicorecontracting" target="_blank" class="text-indigo-600 hover:underline">Instagram</a>
+      <a href="mailto:info@inchicore.ca" class="text-indigo-600 hover:underline">Email</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you! We have received your message.');
+        this.reset();
+      });
+    });
+  </script>
 </body>
 </html>
