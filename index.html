@@ -7,29 +7,42 @@
   <meta name="description" content="Inchicore Contracting Inc. specializes in custom home renovations, additions, and laneway suites in East Toronto and Scarborough.">
   <meta name="keywords" content="Toronto renovations, Scarborough contractor, home renovations, laneway suites, Inchicore Contracting">
   <meta name="author" content="Inchicore Contracting Inc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Inchicore Contracting Inc.">
+  <meta property="og:description" content="Toronto-based renovation specialists transforming homes with quality craftsmanship.">
+  <meta property="og:type" content="website">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800 scroll-smooth">
   <!-- Header -->
   <header class="bg-white shadow-md animate__animated animate__fadeInDown sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-indigo-600 flex items-center gap-2"><i data-feather="home"></i> Inchicore</h1>
-      <nav class="space-x-4 text-sm font-semibold">
-        <a href="#services" class="text-gray-700 hover:text-indigo-600">Services</a>
-        <a href="#projects" class="text-gray-700 hover:text-indigo-600">Projects</a>
-        <a href="#gallery" class="text-gray-700 hover:text-indigo-600">Gallery</a>
-        <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
-        <a href="#contact" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      <button id="nav-toggle" class="sm:hidden text-indigo-600 focus:outline-none" aria-label="Toggle navigation">
+        <i data-feather="menu"></i>
+      </button>
+      <nav id="nav-menu" class="hidden sm:flex space-x-4 text-sm font-semibold">
+        <a href="#services" class="block py-2 sm:py-0 text-gray-700 hover:text-indigo-600">Services</a>
+        <a href="#projects" class="block py-2 sm:py-0 text-gray-700 hover:text-indigo-600">Projects</a>
+        <a href="#gallery" class="block py-2 sm:py-0 text-gray-700 hover:text-indigo-600">Gallery</a>
+        <a href="#about" class="block py-2 sm:py-0 text-gray-700 hover:text-indigo-600">About</a>
+        <a href="#contact" class="block py-2 sm:py-0 text-gray-700 hover:text-indigo-600">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-indigo-600 text-white py-20 animate__animated animate__fadeIn">
-    <div class="max-w-4xl mx-auto px-4 text-center">
+  <section class="relative bg-indigo-600 text-white py-20 animate__animated animate__fadeIn" style="background-image:url('https://source.unsplash.com/1600x900/?home-renovation');background-size:cover;background-position:center;">
+    <div class="absolute inset-0 bg-indigo-800 opacity-75"></div>
+    <div class="relative max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-4">Transforming East Toronto Homes</h2>
       <p class="text-lg mb-6">Custom renovations and quality craftsmanship in East Toronto and Scarborough.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -91,17 +104,25 @@
     <div class="max-w-4xl mx-auto px-4">
       <h3 class="text-3xl font-bold mb-6 text-center">Contact Us</h3>
       <form class="bg-gray-50 p-6 rounded shadow-md space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full border px-4 py-2 rounded" required>
-        <input type="email" placeholder="Email Address" class="w-full border px-4 py-2 rounded" required>
-        <select class="w-full border px-4 py-2 rounded" required>
-          <option value="">Select a Service</option>
-          <option>Custom Renovation</option>
-          <option>Home Addition</option>
-          <option>Laneway or Basement Unit</option>
-          <option>Real Estate Consulting</option>
-          <option>Other</option>
-        </select>
-        <textarea placeholder="Tell us more..." class="w-full border px-4 py-2 rounded" rows="4"></textarea>
+        <label class="block" for="name">Name
+          <input id="name" type="text" placeholder="Your Name" class="w-full border px-4 py-2 rounded mt-1" required>
+        </label>
+        <label class="block" for="email">Email
+          <input id="email" type="email" placeholder="Email Address" class="w-full border px-4 py-2 rounded mt-1" required>
+        </label>
+        <label class="block" for="service">Service
+          <select id="service" class="w-full border px-4 py-2 rounded mt-1" required>
+            <option value="">Select a Service</option>
+            <option>Custom Renovation</option>
+            <option>Home Addition</option>
+            <option>Laneway or Basement Unit</option>
+            <option>Real Estate Consulting</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="block" for="message">Message
+          <textarea id="message" placeholder="Tell us more..." class="w-full border px-4 py-2 rounded mt-1" rows="4"></textarea>
+        </label>
         <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Send Message</button>
       </form>
       <div class="mt-8 text-center">
@@ -125,6 +146,10 @@
     </div>
   </section>
 
+  <button id="back-to-top" class="hidden fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none" aria-label="Back to top">
+    <i data-feather="arrow-up"></i>
+  </button>
+
   <!-- Footer -->
   <footer class="bg-white text-center py-6 shadow-inner">
     <p class="text-gray-600">&copy; 2025 Inchicore Contracting Inc. | All Rights Reserved</p>
@@ -143,6 +168,24 @@
         alert('Thank you! We have received your message.');
         this.reset();
       });
+    });
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    const toTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        toTop.classList.remove('hidden');
+      } else {
+        toTop.classList.add('hidden');
+      }
+    });
+    toTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
